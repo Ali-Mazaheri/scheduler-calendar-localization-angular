@@ -1,0 +1,18 @@
+:host {
+    display: block;
+}
+
+.container {
+    display: flex;
+}
+
+    .container .dayContent {
+        flex: 1;
+        min-width: 182px;
+        border: solid 1px silver;
+        padding-top: 10px;
+    }
+
+    .container > :nth-child(2n+1) {
+        background-color: #f1f1f2;
+    }

@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex:1 1 85px;
+}
+
+.weekLabel {
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    transform: rotate(270deg);
+    color: maroon;
+    margin-right: -28px;
+    margin-left: -35px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

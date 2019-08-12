@@ -1,0 +1,6 @@
+<a [routerLink]="['/daily', dayInfo]" [class]="classN">
+    <div>
+        <div>{{day.date|DateFormat:'day'}}</div>
+        <daysubcell [class]="activeCell ? '' : 'hide'" *ngFor="let detail of cellDetails" [status]="detail"></daysubcell>
+    </div>
+</a>

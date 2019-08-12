@@ -1,0 +1,5 @@
+<datenavigation inputType="week" routePath="/weekly" [currentDate]="startOfWeek"> </datenavigation>
+<br />
+<div class="container">
+    <dailycontent class="dayContent" *ngFor="let day of weekDays" [currentDate]="day" displayDateFormat="date"></dailycontent>
+</div>

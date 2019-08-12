@@ -1,0 +1,23 @@
+body {
+}
+
+    body, body * {
+        user-select: none;
+        box-sizing: border-box;
+    }
+
+
+weeklyview .container * {
+    font-size: small !important;
+}
+
+weeklyview .container .dayContent input[type=text] {
+    width: 100% !important;
+    display: block !important;
+    padding: 0 5px !important;
+}
+
+weeklyview .container .dayContent .label {
+    width: 140px !important;
+    max-width: calc(100% - 5px);
+}

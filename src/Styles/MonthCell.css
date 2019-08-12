@@ -1,0 +1,27 @@
+:host {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    width: calc(39px + (7 * 85px));
+}
+
+.headerRow {
+    display: flex;
+}
+
+    .headerRow .weekLabel {
+        width: 85px;
+        display: flex;
+        transform: rotate(270deg);
+        color: maroon;
+        margin-right: -28px;
+        margin-left: -35px;
+    }
+
+    .headerRow .tableCell {
+        flex: 1;
+        padding: 10px 0 1px 0;
+        font-size: 14px;
+        text-shadow: 0 0 1px lightgrey;
+        text-align: center;
+    }

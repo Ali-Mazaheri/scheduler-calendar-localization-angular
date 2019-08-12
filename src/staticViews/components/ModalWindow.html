@@ -1,0 +1,14 @@
+<span (click)="hide()" class="btn btnX">X</span>
+<div class="container">
+    <div class="header">
+        <span class="title">{{title}}</span>
+        <span (click)="hide()" class="btn btnY">x</span>
+    </div>
+    <div class="body">
+        <ng-content></ng-content>
+    </div>
+    <div class="footer">
+        <span [style.display]="rightBtnVisibility?'block':'none'" (click)="rightBtnClicked()" class="btn btnRight">{{rightBtnName}}</span>
+        <span [style.display]="leftBtnVisibility?'block':'none'" (click)="leftBtnClicked()" class="btn btnLeft">{{leftBtnName}}</span>
+    </div>
+</div>

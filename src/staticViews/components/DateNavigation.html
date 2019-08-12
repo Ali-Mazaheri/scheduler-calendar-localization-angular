@@ -1,0 +1,11 @@
+<span [title]="'Previous'|Localization|async" class="btn left" (click)="goBack()"> &#8617; </span>
+
+<span class="title">
+    <span class="titleText">{{currentDate|DateFormat:inputType}}</span>
+    <span class="titleIcon" (click)="showPicker=!showPicker"></span>
+</span>
+<span [title]="'Next'|Localization|async" class="btn rigth" (click)="goForward()"> &#8618; </span>
+
+<div [style.display]="showPicker?'block':'none'">
+    <input class="datePicker" [type]="pikerType" [value]="pickerValue" (change)="onChanged($event.target.value)" />
+</div>

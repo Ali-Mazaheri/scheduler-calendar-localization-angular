@@ -1,0 +1,14 @@
+<div class="dayLabel">
+    <a [routerLink]="['/daily', dayInfo]">
+        {{currentDate|DateFormat:displayDateFormat}}
+    </a>
+</div>
+<hr />
+<div class="timeRow" *ngFor="let availability of availabilities">
+    <label>
+        <input type="checkbox" #cb [checked]="availability.isNotAvailable" (change)="availability.isNotAvailable=cb.checked" />
+        <span></span> <!-- Icon Place Holder. Dont Remove -->
+        <span class="label" [ngClass]="{'taken': availability.isNotAvailable}">{{availability.startTime|DateFormat:'timeHint':availability.endTime}}</span>
+        <input [placeholder]="'Your comment ...'|Localization|async" type="text" #inp [value]="availability.comment" (change)="availability.comment = inp.value" />
+    </label>
+</div>

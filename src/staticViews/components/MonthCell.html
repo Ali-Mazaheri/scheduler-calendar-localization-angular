@@ -1,0 +1,7 @@
+<datenavigation inputType="month" routePath="/monthly" [currentDate]="currentDate"> </datenavigation>
+
+<div class="headerRow">
+    <div class="weekLabel"></div>
+    <div class="tableCell" *ngFor="let day of weeks[0];">{{day.date|DateFormat:'weekDay'}}</div>
+</div>
+<weekcell [days]="week" *ngFor="let week of weeks;"></weekcell>

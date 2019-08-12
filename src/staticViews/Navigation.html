@@ -1,0 +1,30 @@
+<div class="navContainer">
+    <a class="navItem" [title]="'This month'|Localization|async" routerLink="/monthly">{{'Monthly'|Localization|async}}</a>
+    <a class="navItem" [title]="'This week'|Localization|async" routerLink="/weekly">{{'Weekly'|Localization|async}}</a>
+    <a class="navItem" [title]="'Today'|Localization|async" routerLink="/daily">{{'Daily'|Localization|async}}</a>
+    <label class="navItem">
+        {{'Language'|Localization|async}}
+        <select #cultureSelector (change)="applyCulture($event.target.value)" [value]="slectedLang">
+            <option *ngFor="let culture of langCodes" [value]="culture.languageCultureCode">{{culture.displayName}}</option>
+        </select>
+    </label>
+</div>
+<hr />
+<router-outlet></router-outlet>
+<modalwindow [rightBtnName]="'close'|Localization|async" [rightBtnVisibility]="true" [title]="'Info'|Localization|async">
+    <div dir="auto" style="font: inherit; font-size: 16px; font-weight: bold;">
+        {{'Please refresh the view to apply the changes.'|Localization|async}}
+        <br />
+        {{'There is no automatic way to reload "Plunker" code.'|Localization|async}}
+        <br />
+        {{'It is awesome'|Localization|async}}!!!
+    </div>
+    <hr />
+    <div style="font: inherit; font-size: 16px; font-weight: bold;">
+        Please refresh the view to apply the changes.
+        <br />
+        There is no automatic way to reload "Plunker" code.
+        <br />
+        It is awesome!!!
+    </div>
+</modalwindow>

@@ -1,0 +1,2 @@
+<a class="weekLabel" [routerLink]="['/weekly', routeParam]">{{days[0].date|DateFormat:'weekLabel'}}</a>
+<daycell *ngFor="let day of days;let ind=index" [day]="day"></daycell>
